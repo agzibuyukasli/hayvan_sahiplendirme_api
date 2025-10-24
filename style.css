@@ -1,0 +1,323 @@
+/*
+Kullanıcı işlemleri*/
+.user-actions {
+    display: flex;
+    align-items: center;
+}
+
+.user-actions a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 15px;
+    font-weight: 500;
+}
+
+.guest-view, .user-view {
+    display: flex;
+}
+
+.login-btn, .profile-btn, .logout-btn {
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+/* Diğer CSS kodları buraya... */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Duyuru Bandı */
+
+.announcement-bar {
+    background-color: #e41e26;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* Header */
+
+.main-header {
+    background-color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-nav li {
+    margin: 0 15px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    position: relative;
+}
+
+.new-badge::after {
+    content: "Yeni";
+    background-color: #e41e26;
+    color: white;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 10px;
+    position: absolute;
+    top: -10px;
+    right: -25px;
+}
+
+.user-actions .login-btn {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.user-actions .login-btn i {
+    margin-right: 5px;
+}
+
+/* Kategoriler */
+
+.categories {
+    display: flex;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.category {
+    flex: 1;
+    height: 300px;
+    color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.dog-category {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('dog-bg.jpg') center/cover;
+}
+
+.cat-category {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('cat-bg.jpg') center/cover;
+}
+
+.category-content {
+    z-index: 2;
+}
+
+.category h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.category ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.category li {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.view-all {
+    background-color: white;
+    color: #333;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+}
+
+/* Vitrin */
+
+.showcase {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.showcase-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.add-showcase {
+    color: #e41e26;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.pets-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.pet-card {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #FFD700;
+    color: #333;
+    padding: 5px 10px;
+    font-size: 12px;
+    transform: rotate(45deg) translate(15px, -10px);
+    width: 80px;
+    text-align: center;
+}
+
+.pet-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.pet-card h3 {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.adoption-btn {
+    display: block;
+    background-color: #f44336;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Responsive Tasarım */
+
+@media (max-width: 768px) {
+    .categories {
+        flex-direction: column;
+    }
+    
+    .pets-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Duyuru Bandı */
+
+.announcement-bar {
+    background-color: #e41e26;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* Header */
+
+.main-header {
+    background-color: #27ae60;
+    padding: 15px 0;
+    color: white;
+}
+
+.main-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-nav li {
+    margin: 0 15px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    position: relative;
+}
+
+.new-badge::after {
+    content: "Yeni";
+    background-color: #e41e26;
+    color: white;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 10px;
+    position: absolute;
+    top: -10px;
+    right: -25px;
+} 
